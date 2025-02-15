@@ -1,0 +1,9 @@
+{
+  "status": "0",
+  "message": "Success",
+  "errors": [],
+  "requestId": "string",
+  "data": {
+    "transId": "string"
+  }
+}

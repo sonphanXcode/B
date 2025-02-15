@@ -1,0 +1,2341 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "servers": [
+        {
+            "url": "http://10.21.102.195:8087",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/ext-payment/inquiry/print/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Print Payment Inquiry",
+                "description": "Get Print Payment Inquiry",
+                "operationId": "getPrintInquiryMaker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnPrintRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnPrintResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/list/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get List Payment Inquiry Maker",
+                "description": "Get List Payment Inquiry Maker",
+                "operationId": "getListInquiryListMaker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryListRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultListTxnInquiryResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/transfer/detail/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Detail Payment Inquiry (Maker)",
+                "description": "Get Detail Payment Inquiry (Maker)",
+                "operationId": "getDetailInquiryMaker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryDetailRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnInquiryDetailResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk/detail/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Detail Inquiry Bulk (Maker)",
+                "description": "Get Detail Inquiry Bulk (Maker)",
+                "operationId": "getDetailInquiryBulkMaker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryDetailRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnInquiryBulkDetailResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk-child/detail/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Detail Inquiry Bulk Child (Maker)",
+                "description": "Get Detail Inquiry Bulk Child (Maker)",
+                "operationId": "getDetailInquiryBulkChildMaker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryDetailRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnInquiryBulkChildDetailResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/export/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Report Payment Inquiry",
+                "description": "Get Report Payment Inquiry",
+                "operationId": "getReportInquiryMaker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryListRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnPrintResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/transfer/search/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get List Payment Inquiry Transfer",
+                "description": "Get List Payment Inquiry Transfer",
+                "operationId": "getListInquiryListTransfer",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryListTransferRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultListTxnInquiryListTransferResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/transfer/create/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Create fund transfer inquiry",
+                "description": "Create fund transfer inquiry",
+                "operationId": "createFundTransferInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateTransferInquiryRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultCreateFundTransferInquiryResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk/create/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Create bulk transfer inquiry",
+                "description": "Create bulk transfer inquiry",
+                "operationId": "createBulkTransferInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateTransferInquiryRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultCreateBulkTransferInquiryResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk-child/create/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Create bulk child transfer inquiry",
+                "description": "Create bulk child transfer inquiry",
+                "operationId": "createBulkChildTransferInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateTransferInquiryRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultCreateBulkChildTransferInquiryResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/pending-approval/list/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get List Payment Inquiry Checker",
+                "description": "Get List Payment Inquiry Checker",
+                "operationId": "getListInquiryListChecker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryListRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultListTxnInquiryResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/transfer/pending-approval/detail/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Detail Payment Inquiry (Checker)",
+                "description": "Get Detail Payment Inquiry (Checker)",
+                "operationId": "getDetailInquiryChecker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryDetailRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnInquiryDetailResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk/pending-approval/detail/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Detail Inquiry Bulk (Checker)",
+                "description": "Get Detail Inquiry Bulk (Checker)",
+                "operationId": "getDetailInquiryBulkChecker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryDetailRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnInquiryBulkDetailResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/masterdata/par/category-by-type/list/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Deposit - get category list ",
+                "description": "Danh sách Category theo Type",
+                "operationId": "getCategoriesByType",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CategoryRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultListCategoryResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/validate/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Validate Inquiry",
+                "description": "Validate Inquiry",
+                "operationId": "validateInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValidateInquiryRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultValidateInquiryResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk/search/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get List Payment Inquiry Bulk",
+                "description": "Get List Payment Inquiry Bulk",
+                "operationId": "getListInquiryListBulk",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryListTransferRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultListTxnInquiryListBulkResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk-child/search/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get List Payment Inquiry Bulk Child",
+                "description": "Get List Payment Inquiry Bulk",
+                "operationId": "getListInquiryListBulkChild",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryListTransferRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultListTxnInquiryListBulkResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/init/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Init Inquiry",
+                "description": "Init Inquiry",
+                "operationId": "initInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateTransferInquiryRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultInitTransactionResObject"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/init/confirm/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Init Confirm Inquiry",
+                "description": "Init Confirm Inquiry",
+                "operationId": "initConfirmInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/InitTransConfirmDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultInitConfirmInquiryResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/bulk-child/pending-approval/detail/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Get Detail Inquiry Bulk Child (Checker)",
+                "description": "Get Detail Inquiry Bulk Child (Checker)",
+                "operationId": "getDetailInquiryBulkChildChecker",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TxnInquiryDetailRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultTxnInquiryBulkChildDetailResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/approve/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Approve Inquiry",
+                "description": "Approve Inquiry",
+                "operationId": "approveInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ApproveInquiryRequestDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultInitTransactionResObject"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/approve/confirm/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Approve Confirm Inquiry",
+                "description": "Approve Confirm Inquiry",
+                "operationId": "approveConfirmInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/InitTransConfirmDto"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultConfirmTransRecallResDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ext-payment/inquiry/reject/1.0": {
+            "post": {
+                "tags": [
+                    "inquiry"
+                ],
+                "summary": "Reject List payment inquiry Checker",
+                "description": "Reject List payment inquiry Checker",
+                "operationId": "rejectPaymentInquiry",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RejectTransactionDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResultConfirmTransRecallResDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ResponseError": {
+                "type": "object",
+                "properties": {
+                    "errorCode": {
+                        "type": "string"
+                    },
+                    "errorDesc": {
+                        "type": "string"
+                    },
+                    "refVal": {
+                        "type": "object"
+                    }
+                },
+                "description": "Addition Error List"
+            },
+            "Filter": {
+                "type": "object",
+                "properties": {
+                    "operator": {
+                        "type": "string",
+                        "description": "ct/ eq/ neq/ gt/ gte/ lt/ lte"
+                    },
+                    "field": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Order": {
+                "type": "object",
+                "properties": {
+                    "field": {
+                        "type": "string"
+                    },
+                    "direction": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Page": {
+                "type": "object",
+                "properties": {
+                    "pageSize": {
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "Row number/ page, min = 1",
+                        "format": "int32"
+                    },
+                    "pageNum": {
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "Page index (start from 1), min = 1",
+                        "format": "int32"
+                    },
+                    "getTotal": {
+                        "type": "boolean",
+                        "description": "Get total record size flag"
+                    }
+                }
+            },
+            "TxnInquiryListRequestDto": {
+                "type": "object",
+                "properties": {
+                    "orders": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Order"
+                        }
+                    },
+                    "filters": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Filter"
+                        }
+                    },
+                    "page": {
+                        "$ref": "#/components/schemas/Page"
+                    },
+                    "createdDateFrom": {
+                        "type": "string"
+                    },
+                    "createdDateTo": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "maxItems": 30,
+                        "minItems": 0,
+                        "type": "array",
+                        "items": {
+                            "maxLength": 30,
+                            "minLength": 0,
+                            "type": "string"
+                        }
+                    },
+                    "inquiryReason": {
+                        "maxLength": 30,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "maxLength": 30,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "status": {
+                        "maxItems": 20,
+                        "minItems": 0,
+                        "type": "array",
+                        "items": {
+                            "maxLength": 20,
+                            "minLength": 0,
+                            "type": "string"
+                        }
+                    },
+                    "keyword": {
+                        "maxLength": 4000,
+                        "minLength": 0,
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultListTxnInquiryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/DataListTxnInquiryResponseDto"
+                    }
+                }
+            },
+            "TxnInquiryDetailRequestDto": {
+                "required": [
+                    "id"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "maxLength": 50,
+                        "minLength": 0,
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultTxnInquiryDetailResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/TxnInquiryDetailResponseDto"
+                    }
+                }
+            },
+            "TxnInquiryDetailResponseDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "type": "string"
+                    },
+                    "feeTotal": {
+                        "type": "number"
+                    },
+                    "inquiryReason": {
+                        "type": "string"
+                    },
+                    "inquiryResult": {
+                        "type": "string"
+                    },
+                    "inquiryAnswer": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    },
+                    "debitAccNo": {
+                        "type": "string"
+                    },
+                    "debitAccName": {
+                        "type": "string"
+                    },
+                    "benBankNameShort": {
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "type": "string"
+                    },
+                    "benName": {
+                        "type": "string"
+                    },
+                    "orgTxnId": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "txnStatus": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "remark": {
+                        "type": "string"
+                    },
+                    "inquiryDesc": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "ResultTxnInquiryBulkDetailResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/TxnInquiryBulkDetailResponseDto"
+                    }
+                }
+            },
+            "TxnInquiryBulkDetailResponseDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "type": "string"
+                    },
+                    "feeTotal": {
+                        "type": "number"
+                    },
+                    "inquiryReason": {
+                        "type": "string"
+                    },
+                    "inquiryResult": {
+                        "type": "string"
+                    },
+                    "inquiryAnswer": {
+                        "type": "string"
+                    },
+                    "totalRow": {
+                        "type": "number"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    },
+                    "textAmount": {
+                        "type": "string"
+                    },
+                    "debitAccNo": {
+                        "type": "string"
+                    },
+                    "debitAccName": {
+                        "type": "string"
+                    },
+                    "benBankNameShort": {
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "type": "string"
+                    },
+                    "benName": {
+                        "type": "string"
+                    },
+                    "orgTxnId": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "txnStatus": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "remark": {
+                        "type": "string"
+                    },
+                    "inquiryDesc": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "ResultTxnInquiryBulkChildDetailResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/TxnInquiryBulkChildDetailResponseDto"
+                    }
+                }
+            },
+            "TxnInquiryBulkChildDetailResponseDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "type": "string"
+                    },
+                    "feeTotal": {
+                        "type": "number"
+                    },
+                    "inquiryReason": {
+                        "type": "string"
+                    },
+                    "inquiryResult": {
+                        "type": "string"
+                    },
+                    "inquiryAnswer": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    },
+                    "debitAccNo": {
+                        "type": "string"
+                    },
+                    "debitAccName": {
+                        "type": "string"
+                    },
+                    "benBankNameShort": {
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "type": "string"
+                    },
+                    "benName": {
+                        "type": "string"
+                    },
+                    "orgTxnId": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "txnStatus": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "remark": {
+                        "type": "string"
+                    },
+                    "bulkId": {
+                        "type": "string"
+                    },
+                    "inquiryDesc": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "ResultTxnPrintResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/TxnPrintResponseDto"
+                    }
+                }
+            },
+            "TxnPrintResponseDto": {
+                "type": "object",
+                "properties": {
+                    "url": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "TxnInquiryListTransferRequestDto": {
+                "type": "object",
+                "properties": {
+                    "orders": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Order"
+                        }
+                    },
+                    "filters": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Filter"
+                        }
+                    },
+                    "page": {
+                        "$ref": "#/components/schemas/Page"
+                    },
+                    "id": {
+                        "maxLength": 50,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "effDateFrom": {
+                        "type": "string"
+                    },
+                    "effDateTo": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "maxLength": 30,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "status": {
+                        "maxItems": 30,
+                        "minItems": 0,
+                        "type": "array",
+                        "items": {
+                            "maxLength": 30,
+                            "minLength": 0,
+                            "type": "string"
+                        }
+                    },
+                    "benAccName": {
+                        "maxLength": 20,
+                        "minLength": 0,
+                        "pattern": "^[A-Za-z0-9]{0,20}$",
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "maxLength": 20,
+                        "minLength": 0,
+                        "pattern": "^[A-Za-z0-9]{0,20}$",
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "maxLength": 30,
+                        "minLength": 0,
+                        "type": "string"
+                    },
+                    "keyword": {
+                        "maxLength": 4000,
+                        "minLength": 0,
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultListTxnInquiryListTransferResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/DataListTxnInquiryListTransferResponseDto"
+                    }
+                }
+            },
+            "DataListTxnInquiryListTransferResponseDto": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "description": "List data",
+                        "items": {
+                            "$ref": "#/components/schemas/TxnInquiryListTransferResponseDto"
+                        }
+                    },
+                    "total": {
+                        "type": "integer",
+                        "description": "Total size",
+                        "format": "int64"
+                    }
+                },
+                "description": "Data"
+            },
+            "TxnInquiryListTransferResponseDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "benBankNameShort": {
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "type": "string"
+                    },
+                    "benName": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "cardNo": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    },
+                    "benId": {
+                        "type": "string"
+                    }
+                },
+                "description": "List data"
+            },
+            "CreateTransferInquiryRequest": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultCreateFundTransferInquiryResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/CreateFundTransferInquiryResponse"
+                    }
+                }
+            },
+            "CreateFundTransferInquiryResponse": {
+                "type": "object",
+                "properties": {
+                    "inquiryReson": {
+                        "type": "string"
+                    },
+                    "inquiryDesc": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    },
+                    "debitAccNo": {
+                        "type": "string"
+                    },
+                    "debitAccName": {
+                        "type": "string"
+                    },
+                    "benBankNameShort": {
+                        "type": "string"
+                    },
+                    "benName": {
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "type": "string"
+                    },
+                    "benCardno": {
+                        "type": "string"
+                    },
+                    "benId": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "prodCode": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "remark": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "ResultCreateBulkTransferInquiryResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/CreateBulkTransferInquiryResponse"
+                    }
+                }
+            },
+            "CreateBulkTransferInquiryResponse": {
+                "type": "object",
+                "properties": {
+                    "inquiryReson": {
+                        "type": "string"
+                    },
+                    "inquiryDesc": {
+                        "type": "string"
+                    },
+                    "totalRow": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    },
+                    "debitAccNo": {
+                        "type": "string"
+                    },
+                    "debitAccName": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "prodCode": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "remark": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "ResultCreateBulkChildTransferInquiryResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/CreateBulkChildTransferInquiryResponse"
+                    }
+                }
+            },
+            "CreateBulkChildTransferInquiryResponse": {
+                "type": "object",
+                "properties": {
+                    "inquiryReson": {
+                        "type": "string"
+                    },
+                    "inquiryDesc": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    },
+                    "debitAccNo": {
+                        "type": "string"
+                    },
+                    "debitAccName": {
+                        "type": "string"
+                    },
+                    "benBankNameShort": {
+                        "type": "string"
+                    },
+                    "benName": {
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "type": "string"
+                    },
+                    "benId": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "prodCode": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "remark": {
+                        "type": "string"
+                    },
+                    "bulkId": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "DataListTxnInquiryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "description": "List data",
+                        "items": {
+                            "$ref": "#/components/schemas/TxnInquiryResponseDto"
+                        }
+                    },
+                    "total": {
+                        "type": "integer",
+                        "description": "Total size",
+                        "format": "int64"
+                    }
+                },
+                "description": "Data"
+            },
+            "TxnInquiryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "orgId": {
+                        "type": "string"
+                    },
+                    "txnType": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "type": "string"
+                    },
+                    "createdBy": {
+                        "type": "string"
+                    },
+                    "approvedBy": {
+                        "type": "string"
+                    },
+                    "inquiryReason": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    }
+                },
+                "description": "List data"
+            },
+            "CategoryRequestDto": {
+                "required": [
+                    "categoryType"
+                ],
+                "type": "object",
+                "properties": {
+                    "categoryType": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "ResultListCategoryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/DataListCategoryResponseDto"
+                    }
+                }
+            },
+            "DataListCategoryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "description": "List data",
+                        "items": {
+                            "$ref": "#/components/schemas/CategoryResponseDto"
+                        }
+                    },
+                    "total": {
+                        "type": "integer",
+                        "description": "Total size",
+                        "format": "int64"
+                    }
+                },
+                "description": "Data"
+            },
+            "CategoryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "description": "List data"
+            },
+            "ValidateInquiryRequestDto": {
+                "type": "object",
+                "properties": {
+                    "inquiryReason": {
+                        "type": "string"
+                    },
+                    "inquiryDesc": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultValidateInquiryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/ValidateInquiryResponseDto"
+                    }
+                }
+            },
+            "ValidateInquiryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "feeTotal": {
+                        "type": "number"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "validateInquiryResponse": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "ResultListTxnInquiryListBulkResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/DataListTxnInquiryListBulkResponseDto"
+                    }
+                }
+            },
+            "DataListTxnInquiryListBulkResponseDto": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "description": "List data",
+                        "items": {
+                            "$ref": "#/components/schemas/TxnInquiryListBulkResponseDto"
+                        }
+                    },
+                    "total": {
+                        "type": "integer",
+                        "description": "Total size",
+                        "format": "int64"
+                    }
+                },
+                "description": "Data"
+            },
+            "TxnInquiryListBulkResponseDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "benAccNo": {
+                        "type": "string"
+                    },
+                    "benName": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "cardNo": {
+                        "type": "string"
+                    },
+                    "effDate": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    }
+                },
+                "description": "List data"
+            },
+            "CreateTransferInquiryRequestDto": {
+                "required": [
+                    "id"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultInitTransactionResObject": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/InitTransactionResObject"
+                    }
+                }
+            },
+            "InitTransactionResObject": {
+                "type": "object",
+                "properties": {
+                    "transKey": {
+                        "type": "string"
+                    },
+                    "transaction": {
+                        "type": "object"
+                    },
+                    "requireAuth": {
+                        "type": "boolean"
+                    },
+                    "transAuth": {
+                        "$ref": "#/components/schemas/TransAuth"
+                    },
+                    "confirmUrl": {
+                        "type": "string"
+                    }
+                },
+                "description": "Data"
+            },
+            "TransAuth": {
+                "type": "object",
+                "properties": {
+                    "authType": {
+                        "type": "string"
+                    },
+                    "expTime": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "isSameDevice": {
+                        "type": "string"
+                    },
+                    "qrData": {
+                        "type": "string"
+                    },
+                    "authId": {
+                        "type": "string"
+                    },
+                    "dataSign": {
+                        "type": "string"
+                    },
+                    "additionalInfo": {
+                        "$ref": "#/components/schemas/CustomQrCodeDataDto"
+                    }
+                }
+            },
+            "CustomQrCodeDataDto": {
+                "type": "object",
+                "properties": {
+                    "authId": {
+                        "type": "string"
+                    },
+                    "userId": {
+                        "type": "string"
+                    },
+                    "qrType": {
+                        "type": "string",
+                        "enum": [
+                            "BIDVIBANK_TRANS_OTP",
+                            "NAPAS"
+                        ]
+                    },
+                    "additionalInfo": {
+                        "type": "string"
+                    },
+                    "productName": {
+                        "type": "string"
+                    },
+                    "subProductName": {
+                        "type": "string"
+                    },
+                    "productCode": {
+                        "type": "string"
+                    },
+                    "subProductCode": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "string"
+                    },
+                    "trans": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/QrTransGroupDto"
+                        }
+                    },
+                    "createdBy": {
+                        "type": "string"
+                    },
+                    "totalTrans": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            },
+            "QrTransGroupDto": {
+                "type": "object",
+                "properties": {
+                    "ccy": {
+                        "type": "string",
+                        "description": "CCY",
+                        "example": "VND"
+                    },
+                    "amount": {
+                        "type": "string",
+                        "description": "amount",
+                        "example": "10000"
+                    },
+                    "amountText": {
+                        "type": "string",
+                        "description": "amountText",
+                        "example": "Mot nghin dong"
+                    },
+                    "total": {
+                        "type": "string",
+                        "description": "total",
+                        "example": "10"
+                    }
+                }
+            },
+            "InitTransConfirmDto": {
+                "required": [
+                    "transKey"
+                ],
+                "type": "object",
+                "properties": {
+                    "transKey": {
+                        "type": "string"
+                    },
+                    "confirmValue": {
+                        "maxLength": 50,
+                        "minLength": 0,
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultInitConfirmInquiryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/InitConfirmInquiryResponseDto"
+                    }
+                }
+            },
+            "InitConfirmInquiryResponseDto": {
+                "type": "object",
+                "properties": {
+                    "transaction": {
+                        "$ref": "#/components/schemas/TransactionInquiry"
+                    },
+                    "successfulTransactions": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TransactionResDetail"
+                        }
+                    },
+                    "failedTransactions": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TransactionResDetail"
+                        }
+                    }
+                },
+                "description": "Data"
+            },
+            "TransactionInquiry": {
+                "type": "object",
+                "properties": {
+                    "orgTxnId": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ApproveInquiryRequestDto": {
+                "required": [
+                    "txnIds"
+                ],
+                "type": "object",
+                "properties": {
+                    "txnIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "ResultConfirmTransRecallResDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "integer",
+                        "description": "Result status",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Result code detail"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Result code description"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Addition Error List",
+                        "items": {
+                            "$ref": "#/components/schemas/ResponseError"
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "description": "Trace ID"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/ConfirmTransRecallResDto"
+                    }
+                }
+            },
+            "ConfirmTransRecallResDto": {
+                "type": "object",
+                "properties": {
+                    "transaction": {
+                        "$ref": "#/components/schemas/TxnPaymentRecallDto"
+                    },
+                    "successfulTransactions": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TransactionResDetail"
+                        }
+                    },
+                    "failedTransactions": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TransactionResDetail"
+                        }
+                    }
+                },
+                "description": "Data"
+            },
+            "TxnPaymentRecallDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "txnId": {
+                        "type": "string"
+                    },
+                    "totalRow": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "totalAmountText": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "ccy": {
+                        "type": "string"
+                    }
+                }
+            },
+            "TransactionResDetail": {
+                "required": [
+                    "message",
+                    "txnId"
+                ],
+                "type": "object",
+                "properties": {
+                    "txnId": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "RejectTransactionDTO": {
+                "required": [
+                    "txnIds"
+                ],
+                "type": "object",
+                "properties": {
+                    "txnIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "rejectReason": {
+                        "type": "string"
+                    }
+                }
+            },
+            "TxnPrintRequestDto": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
